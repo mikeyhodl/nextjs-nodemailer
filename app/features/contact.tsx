@@ -15,15 +15,18 @@ export default function Contact() {
     setIsSending(true);
 
     try {
-      const response = await fetch("https://nextjs-nodemailer-seven.vercel.app/api/email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-        }),
-        mode: "no-cors",
-      });
+      const response = await fetch(
+        "https://nextjs-nodemailer-seven.vercel.app/api/email",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name,
+            email,
+          }),
+          mode: "no-cors",
+        }
+      );
     } catch (error) {
       console.log(error);
       alert("Something went wrong. Please try again.");
