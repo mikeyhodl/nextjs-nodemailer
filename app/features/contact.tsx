@@ -15,7 +15,7 @@ export default function Contact() {
     setIsSending(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:3000/api/email", {
+      const response = await fetch("https://nextjs-nodemailer-seven.vercel.app/api/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
